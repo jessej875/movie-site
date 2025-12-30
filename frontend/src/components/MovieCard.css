@@ -1,37 +1,27 @@
 .movie-card {
+  width: 150px;
+  margin: 0 10px;
   cursor: pointer;
-  background-color: #fff;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-  max-width: 200px;
-}
-
-.movie-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .movie-poster {
   width: 100%;
-  display: block;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .movie-info {
-  padding: 10px;
+  margin-top: 8px;
 }
 
 .movie-title {
-  font-size: 1rem;
-  margin: 0 0 5px 0;
-  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
 }
 
 .movie-rating {
-  font-size: 0.9rem;
-  color: #666;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  font-size: 12px;
+  color: #ffd700;
 }
