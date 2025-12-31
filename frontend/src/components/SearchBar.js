@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SearchBar.css';
 
 function SearchBar({ onSearch }) {
   const [query, setQuery] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -11,8 +13,17 @@ function SearchBar({ onSearch }) {
     }
   };
 
+  const handleHome = () => {
+    setQuery('');
+    navigate('/');
+    window.location.reload();
+  };
+
   return (
     <div className="search-bar-container">
+      <button className="home-button" onClick={handleHome}>
+        Home
+      </button>
       <form onSubmit={handleSubmit} className="search-form">
         <input
           type="text"
